@@ -51,7 +51,7 @@
                     <!--Content Image-->
                     
                     <!-- Content mySelf-->
-                    <div class="w-full break-normal flex justify-center mt-2 text-center">
+                    <div class="w-full break-normal flex justify-center mt-1 text-center">
                     <div class="text-blue-600 font-mono font-bold text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
                         Hello! I'm Javinez Paul Backend Developer<br />
                         Make it simple! I Love Coding while music.
@@ -61,8 +61,8 @@
             
             </div><!--Profile Banner-->
         </div><!-- cover profile -->
-            <div class="rounded-lg bg-yellow-500 w-full h-96 mt-60 border-8 bg-opacity-50">
-                    <div class="w-full lg:flex m-4 ">
+            <div class="rounded-lg bg-yellow-500 w-full h-96 mt-60 border-8 bg-opacity-50 mt-7">
+                    <div class="w-full lg:flex m-4">
                         <div class="lg:flex-grow sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl">
                             <button type="button" id="show1" class="lg:inline-block bg-blue-500 hover:bg-blue-700 mb-1 text-white font-bold px-2 py-2 rounded-lg">Profile</button>
                             <button type="button" id="show2" class="lg:inline-block bg-blue-500 hover:bg-blue-700 mb-1 text-white font-bold px-2 py-2 rounded-lg">Skills</button>
@@ -121,6 +121,26 @@
                 </div>
             </div>
 
+        <!--Contact Us-->
+        <div class="bg-blue-300 w-full h-64 mt-72 shadow-2xl rounded-2xl">
+            <div class="bg-gray-700 bg-opacity-70 h-56 p-10 mt-4 w-full rounded-lg shadow-2xl ">
+                <div class="flex justify-between flex-col">
+                    <h1 class="text-white font-mono text-sm text-center text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold">Gmail Contact</h1>
+                    <h6 class="text-white font-thin text-sm text-center text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl">itechpaulj@gmail.com</h3>
+                </div>
+
+                <div class="flex justify-between flex-col text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">
+                    <h1 class="text-white font-mono text-sm text-center text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl font-bold">Location</h1>
+                    <h6 class="text-white font-thin text-sm text-center text-base sm:text-sm md:text-xl lg:text-2xl xl:text-3xl">San Jose Del Monte Bulacan, Philippines</h3>
+                </div>
+
+            </div>
+        </div>
+        <!--Contact Us-->  
+        <div class="border-b-8 w-full bg-purple-500 bg-opacity-50 h-5 mt-3 rounded-b-3xl">
+
+        </div>    
+
         <!--Modal-->
         <div id="modal" style="display: none;" class="fixed flex inset-0 bg-white bg-opacity-75 items-center justify-center">
             <div class="h-96 flex flex-col mt-24 bg-white shadow-2xl rounded-lg border-2 border-gray-200 p-6 m-10 overflow-x-auto">
@@ -152,31 +172,14 @@
         <!--Modal-->
     </main>
 
-    <footer class="mt-96 w-full h-auto bg-red-500 text-center text-white font-bold font-mono">
-        <h1>Copyright ©<script>document.write(new Date().getFullYear())</script>.<br /> Made with Tailwind Css </h1>
-    </footer>
+    <footer class="absolute mt-48 w-full h-auto bg-red-500 text-center text-white font-bold font-mono">
+        <h1>Copyright © <script>document.write(new Date().getFullYear())</script>.<br /> Made with Tailwind Css </h1>
+    </footer>  
 
 
     <script>
         const botton = document.querySelector('#botton');
         const menu = document.querySelector('#menu');
-
-        botton.addEventListener('click', () => {
-            menu.classList.toggle('hidden')
-        });
-
-        //modal 
-        const screenshot = document.querySelector('#screenshot');
-        const modal = document.querySelector('#modal');
-        screenshot.addEventListener('click',()=>{
-            modal.style.display = 'inline';
-        });
-        
-        const close_modal = document.querySelector('#close-modal');
-        close_modal.addEventListener('click',()=>{
-            modal.style.display = 'none';
-        });
-
         //button
         const show1 = document.querySelector('#show1');
         const show2 = document.querySelector('#show2');
@@ -189,6 +192,27 @@
         const show2Data = document.querySelector('#show2Data');
         const show3Data = document.querySelector('#show3Data');
         const show4Data = document.querySelector('#show4Data');
+
+        //modal 
+        const screenshot = document.querySelector('#screenshot');
+        const modal = document.querySelector('#modal');
+        const close_modal = document.querySelector('#close-modal');
+        botton.addEventListener('click', () => {
+            menu.classList.toggle('hidden')
+        });
+
+
+
+        screenshot.addEventListener('click',()=>{
+            modal.style.display = 'inline';
+        });
+        
+        
+        close_modal.addEventListener('click',()=>{
+            modal.style.display = 'none';
+        });
+
+
 
         show1.addEventListener('click',()=>{
             show1Data.style.display ="inline";
